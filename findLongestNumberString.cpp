@@ -13,7 +13,7 @@ const char* findLongestNumStr(const char* inputStr, int length){
         return "";
     int longest = 0;
     int start_index = 0, end_index = 0;
-    //DP, longestNum[i] holds the max number string ended with character inputStr[i]
+    //DP, longestNum[i] holds the length of the max number string ended with character inputStr[i]
     int* longestNum = new int[length]{0};
     //initialize the first value of longestNum
     if(isNumber(inputStr[0])){
@@ -31,12 +31,12 @@ const char* findLongestNumStr(const char* inputStr, int length){
 
     int i = 1;
     while(inputStr[i] != '\0'){
-        if(isSign(inputStr[i])&&isNumber(inputStr[i+1])){
+        if(isSign(inputStr[i]) && isNumber(inputStr[i+1])){
             longestNum[i] = 1;
         }else if(isNumber(inputStr[i])){
             longestNum[i] = longestNum[i-1]+1;
         }else if(inputStr[i] == '.'){
-            if(isNumber(inputStr[i-1])&&isNumber(inputStr[i+1])){
+            if(isNumber(inputStr[i-1]) && isNumber(inputStr[i+1])){
                 int j = 1;
                 for(; j <= longestNum[i-1]; j++){
                     if(inputStr[i-j] == '.')
