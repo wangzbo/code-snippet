@@ -1,3 +1,6 @@
+//梅花桩问题：Redraiment总是起点不限，从前到后，往高的桩子走，但走的步数最多。
+//获取最长上升子序列的长度以及该序列，eg.: input: 2,5,1,5,4,5, output: 3; 2,4,5 or 1,4,5
+
 int LongestAscSubSeq(int inputArr[], int length, vector<int>& path){
     int max_Len = 0; //the longest sub asc seq length
     int max_len_index = 0; //the last index/position of longest sub asc seq
