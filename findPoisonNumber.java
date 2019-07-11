@@ -1,12 +1,13 @@
-//There are 10 glasses of water and 2 of them are posionous. How many mouses at least needed to test out the poisonous water for only one experiment.
+//There are 10 glasses of water and 2 of them are posionous. How many mouses at least needed to test out the poisonous water for only 
+//one experiment.
 //Solution: Assume the ten glasses of water are from 1 to 10. Layout the 1-9 glasses of water as a 3*3 matrix:
 //   
 //   1    2    3
 //   4    5    6
 //   7    8    9
 //
-//Use 3 mouses to drink the water in each row, another 3 to drink the water in each column, the last one mouse to drink the diagonal 1,5,9.
-//Finally, according to which mouses are dead, we can know which 2 glasses of water are poisonous.
+//Use 3 mouses to drink the water in each row, another 3 to drink the water in each column, the last one mouse to drink the diagonal 
+//1,5,9. Finally, according to which mouses are dead, we can know which 2 glasses of water are poisonous.
 //Given the dead mouse numbers, output the poisonous water numbers
 
 private HashMap<Integer, ArrayList<Integer>> mousePoisonMap = new HashMap<Integer, ArrayList<Integer>>();
