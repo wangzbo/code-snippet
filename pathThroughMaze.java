@@ -4,14 +4,13 @@
     //is there a valid path when starting to search from position (r,c)
     public boolean isThereAPath(int [][] matrix, boolean [][] flags,int r, int c, ArrayList<String> path) {
     	  if(matrix.length == 0 || matrix[0].length == 0)
-    		  return false;
+    	      return false;
     	  //mark at current position
     	  path.add(r + "," + c);
     	  flags[r][c] = true;
     	  //arriving at the terminal
-    	  if(r == matrix.length - 1 && c == matrix[0].length - 1) {
+    	  if(r == matrix.length - 1 && c == matrix[0].length - 1)
     		  return true;
-    	  }
     	  for(int i = 0; i < 4; i++) {	
     		  if(r+dx[i] >=0 && r+dx[i] < matrix.length && c+dy[i] >= 0 && c+dy[i] < matrix[0].length 
     				  && !flags[r+dx[i]][c+dy[i]] && matrix[r+dx[i]][c+dy[i]] == 0 
@@ -25,7 +24,7 @@
     }
     
     public static void main(String args[]) {
-        //  0-0 0 1 0 1
+            //  0-0 0 1 0 1
 		    //    |
 		    //  1 0 1 0-0-0
 		    //    |   |   |
