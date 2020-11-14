@@ -26,18 +26,18 @@ public boolean isThereAPath(int [][] matrix, boolean [][] flags,int r, int c, Ar
 public static void main(String args[]) {
 
     //  0-0 0 1 0 1
-		//    |
-		//  1 0 1 0-0-0
-		//    |   |   |
-		//  0-0 1 0 1 0
-		//  |     |   |
-		//  0 1 0-0 1 0
-		//  |   |     |
-		//  0-0-0 1 0 0
-		//
-		int [][] matrix = {{0,0,0,1,0,1},{1,0,1,0,0,0},{0,0,1,0,1,0},{0,1,0,0,1,0},{0,0,0,1,0,0}};
+    //    |
+    //  1 0 1 0-0-0
+    //    |   |   |
+    //  0-0 1 0 1 0
+    //  |     |   |
+    //  0 1 0-0 1 0
+    //  |   |     |
+    //  0-0-0 1 0 0
+    //
+    int [][] matrix = {{0,0,0,1,0,1},{1,0,1,0,0,0},{0,0,1,0,1,0},{0,1,0,0,1,0},{0,0,0,1,0,0}};
     boolean [][] flags = new boolean[matrix.length][matrix[0].length];
-		ArrayList<String> path = new ArrayList<String>();
-		System.out.println(isThereAPath(matrix, flags, 0, 0, path));
-		System.out.println(path);
+    ArrayList<String> path = new ArrayList<String>();
+    System.out.println(isThereAPath(matrix, flags, 0, 0, path));
+    System.out.println(path);
 }
